@@ -1,0 +1,114 @@
+.content{
+	
+	margin: 0 10px;
+	
+	.single{
+		
+		.stuff{
+			
+			//.about{border: 1px solid red;}
+			
+			//figure{border: 1px solid blue;}
+			
+			.about{
+				
+				.meta{
+					
+					font-size: 1em;
+					
+				}
+				
+				p{ font-size: 1em; }
+				@media screen and (min-width: 1345px){ p{ font-size: 1.2em; } }
+				
+				.blockquote{
+					
+					font-style: italic;
+					color: #333;
+					margin: 1em 0 1em 22.5px;
+					padding: 0 0 0 22.5px;
+					position: relative;
+					
+					p.quote:before{
+						
+						font-family: "MillerHeadline Bold",Cambria,Georgia,serif;
+						content: "\201C";
+						font-size: 4em;
+						position: absolute;
+						left: -27px;
+						top: -20px;
+						
+					}
+					
+				}
+				
+				@media screen and (min-width: 665px) and (max-width: 1345px){
+					
+					.blockquote{
+						
+						font-style: italic;
+						color: #333;
+						margin: 1em 0 1em 12.5px;
+						padding: 0 0 0 12.5px;
+						position: relative;
+						
+						p.quote:before{
+							
+							font-family: "MillerHeadline Bold",Cambria,Georgia,serif;
+							content: "\201C";
+							font-size: 4em;
+							position: absolute;
+							left: -27px;
+							top: -20px;
+							
+						}
+						
+					}
+					
+				}
+				
+			}
+			
+		}
+	
+		//@media screen and (min-width: 665px){
+		@media screen and (min-width: 800px){
+		
+			.stuff{
+			
+				width: 100%;
+				margin: 0;
+				/* See: https://css-tricks.com/using-flexbox/ */
+				display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+				display: -ms-flexbox;      /* TWEENER - IE 10 */
+				display: -webkit-flex;     /* NEW - Chrome */
+				display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+				-ms-flex-direction: row;
+				-webkit-flex-direction: row;
+				flex-direction: row;
+			
+				justify-content: space-between;
+			
+				.about{
+				
+					flex: 0 0 38%;
+				
+				}
+			
+				figure{
+				
+					flex: 0 0 58%
+				
+				}
+			
+				// Ordering
+				.first  { -ms-flex-order: 1; -webkit-order: 1; order: 1; }
+				.second { -ms-flex-order: 2; -webkit-order: 2; order: 2; }
+			
+			}
+		
+		}
+	
+	}
+	
+}

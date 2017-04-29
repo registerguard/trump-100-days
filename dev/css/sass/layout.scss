@@ -1,0 +1,161 @@
+h2#hammer{
+	text-align: center;
+	font-size: 3em;
+	font-family: "MillerHeadline Bold",Cambria,Georgia,serif;
+	//font-family: "BentonSansCond Regular",Arial,sans-serif;
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+	background: black;
+	color: white;
+	margin: 0 10px;
+	padding: 10px 0;
+}
+@media screen and (min-width: 665px){
+	h2#hammer{
+		font-size: 5em;
+	}
+}
+@media screen and (min-width: 1005px){
+	h2#hammer{
+		font-size: 8em;
+	}
+}
+
+
+// Headline and byline
+.header{
+
+	.headline {
+	
+		margin: 0 10px;
+		text-align: center;
+	
+		h1{
+			margin-bottom: 10px;
+		}
+	
+		.bydate {
+		
+			@include flexy(column);
+		
+			border-top: 1px solid ccc(.5);
+			border-bottom: 1px solid ccc(.5);
+			padding: 10px 0 10px 0;
+	
+			.byline, .date {
+				@include flexy-flex(100%, 1, 0, auto)
+			}
+	
+			.byline{
+				font-weight: 900;
+				font-family: Cambria, Georgia, serif!important;
+				font-variant: small-caps;
+			} 
+	
+			.date{
+				font-weight: 100;
+				color: #666;
+				font-family: Cambria, Georgia, serif!important;
+			}
+		}
+	}
+
+	// Go out to one row on desktop
+	@media screen and (min-width: 600px){
+		.headline {
+			.bydate {
+			
+				@include flexy(row);
+			
+				justify-content: space-between;
+			
+				.byline, .date {
+				
+					@include flexy-flex(initial, unset)
+				}
+				.date {
+					justify-content: flex-end;
+				}
+			}
+		}
+	}
+	
+}
+
+.breaker{
+	
+	//margin: 0 auto;
+	font-size: 2em;
+	text-align: center;
+	
+}
+
+
+// Wrap content
+#outer{
+	margin: 0 auto 10px auto;
+	max-width: 1200px;
+	padding: 10px;
+	
+	.inner{
+		margin: 10px 0;
+	}
+	@media screen and (min-width: 665px){
+		.inner{
+			max-width: 600px;
+			margin: 10px auto;
+		}
+	}
+	@media screen and (min-width: 1005px){
+		.inner{
+			max-width: 800px;
+		}
+	}
+	@media screen and (min-width: 1345px){
+		.inner{
+			max-width: 1200px;
+		}
+	}
+	
+	
+	p.caption{
+		margin: 0 10px;
+	}
+	
+	.text {
+		
+		max-width: 600px;
+		margin: 0 10px;
+		
+		figure{
+		
+			max-width: 180px;
+			
+			figcaption{
+				font-style: italic;
+				text-align: right;
+			}
+			
+		}
+		
+		@media screen and (min-width: 1005px){ 
+			figure { margin-right: -30px; } 
+		} 
+		
+		p{
+			font-size: 1.2em;
+			line-height: 1.8em;
+			
+		}
+	}
+	
+	@media screen and (min-width: 665px){
+		.text { margin: 0 auto; }
+	}
+	
+}
+
+footer {
+	margin: 0 20px;
+}

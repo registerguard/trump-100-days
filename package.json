@@ -1,0 +1,22 @@
+{
+  "name": "trump-100-days",
+  "version": "0.0.1",
+  "description": "Trump's first 100 days",
+  "repository": "https://github.com/registerguard/trump-100-days/",
+  "license": "MIT",
+  "devDependencies": {
+    "async": "^2.3.0",
+    "google-spreadsheet": "^2.0.3",
+    "grunt": "~0.4.5",
+    "grunt-aws-s3": "^0.14.5",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^2.0.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^2.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-env": "^0.4.4",
+    "grunt-preprocess": "^5.1.0",
+    "grunt-sass": "^2.0.0"
+  }
+}

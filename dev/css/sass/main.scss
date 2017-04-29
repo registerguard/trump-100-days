@@ -1,0 +1,19 @@
+// Variables
+@import "_vars";
+// Main layout and other details
+@import "layout";
+// Get thumbs flex
+@import "thumbs";
+// Get item styles
+@import "item";
+
+// Other overrides
+// To make sure header does not go beneath Leaflet zoom buttons
+#zeppelin { z-index: 9999 !important; }
+
+// Remove all img margin
+img { margin: 0; }
+
+
+.vjs-poster{ display: none !important; }
+video[poster]{ display: none !important; }
