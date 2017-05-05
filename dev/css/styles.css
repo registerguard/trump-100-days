@@ -1,3 +1,4 @@
+@charset "UTF-8";
 h2#hammer {
   text-align: center;
   font-size: 3em;
@@ -73,8 +74,8 @@ h2#hammer {
       justify-content: flex-end; } }
 
 .breaker {
-  font-size: 2em;
-  text-align: center; }
+  margin: 20px auto 30px auto;
+  max-width: 200px; }
 
 #outer {
   margin: 0 auto 10px auto;
@@ -98,16 +99,27 @@ h2#hammer {
     max-width: 600px;
     margin: 0 10px; }
     #outer .text figure {
-      max-width: 180px; }
+      max-width: 75px; }
       #outer .text figure figcaption {
         font-style: italic;
         text-align: right; }
+    @media screen and (min-width: 665px) {
+      #outer .text figure {
+        max-width: 130px; } }
     @media screen and (min-width: 1005px) {
       #outer .text figure {
+        max-width: 180px;
         margin-right: -30px; } }
     #outer .text p {
       font-size: 1.2em;
-      line-height: 1.8em; }
+      line-height: 2.4em; }
+      #outer .text p.dropcap::first-letter {
+        float: left;
+        font-size: 5em;
+        padding-right: 10px;
+        padding-top: .2em;
+        padding-bottom: 0;
+        font-family: Cambria, Georgia, serif; }
   @media screen and (min-width: 665px) {
     #outer .text {
       margin: 0 auto; } }
@@ -157,9 +169,9 @@ footer {
     margin: 1em 0 1em 22.5px;
     padding: 0 0 0 22.5px;
     position: relative; }
-    .content .single .stuff .about .blockquote p.quote:before {
+    .content .single .stuff .about .blockquote p.quote:before, .content .single .stuff .about .blockquote p.quote::before {
       font-family: "MillerHeadline Bold",Cambria,Georgia,serif;
-      content: "\201C";
+      content: "“";
       font-size: 4em;
       position: absolute;
       left: -27px;
@@ -171,9 +183,9 @@ footer {
       margin: 1em 0 1em 12.5px;
       padding: 0 0 0 12.5px;
       position: relative; }
-      .content .single .stuff .about .blockquote p.quote:before {
+      .content .single .stuff .about .blockquote p.quote:before, .content .single .stuff .about .blockquote p.quote::before {
         font-family: "MillerHeadline Bold",Cambria,Georgia,serif;
-        content: "\201C";
+        content: "“";
         font-size: 4em;
         position: absolute;
         left: -27px;
@@ -213,11 +225,5 @@ footer {
 
 img {
   margin: 0; }
-
-.vjs-poster {
-  display: none !important; }
-
-video[poster] {
-  display: none !important; }
 
 /*# sourceMappingURL=styles.css.map */
